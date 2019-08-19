@@ -39,7 +39,7 @@ RUN curl -L -o /tmp/redis.tar.gz https://github.com/phpredis/phpredis/archive/$P
 
 
 
-# install GD and mcrypt
+# install GD and mcrypt(參考用)
 RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
@@ -53,7 +53,7 @@ RUN apt-get update && apt-get install -y \
 RUN pecl install apcu \
     && docker-php-ext-enable apcu
 
-#install Imagemagick & PHP Imagick ext
+#install Imagemagick & PHP Imagick ext (參考用)
 RUN apt-get update && apt-get install -y \
         libmagickwand-dev --no-install-recommends
 
